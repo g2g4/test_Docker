@@ -1,19 +1,19 @@
-## successfully tested on: 
-* 18.04.3 LTS (Bionic Beaver)
+### successfully tested on: 
+* Ubuntu 18.04.3 LTS (Bionic Beaver)
 
-## known bugs
+### known bugs
 1. container send data to /tmp/index.html only after successful web or lynx requests. 
 
-# usage 
-```
+### usage 
+```bash
 docker run -d -p 81:81 -v /tmp:/tmp g2g4/ponytest 
 ```
-# make test request to HTTP listener
+### make test request to HTTP listener
 
 web-browser http://127.0.0.1:81/your_message
 
 or
-``` 
+```bash
 curl http://127.0.0.1:81/your_message2/test/
 ```
 or
@@ -24,11 +24,11 @@ lynx http://127.0.0.1:81/your_message2/test/test58
 ```
 cat /tmp/index.html
 ```
-# Also your can bring up http-server and publish all http-request which stored in /tmp/index.html
+### Also your can bring up http-server and publish all http-request which stored in /tmp/index.html
 ```
 docker run -dit --name ponytestHTTP -p 82:80 -v /tmp:/usr/local/apache2/htdocs/ httpd:2.4
 ```
-# show requests
+### show requests
 
 web-browser http://127.0.0.1:82
 
@@ -36,7 +36,8 @@ or
 ```
 curl http://127.0.0.1:82
 ```
-# example of my real output
+---
+### example of my real output
 ```
 cat /tmp/index.html
 ```
@@ -74,8 +75,8 @@ GET /test1/test2/test3/test4 HTTP/1.1
 GET /test1/test2/test3/test4/test55 HTTP/1.1
 GET /test1/test2/test3/test4/test556677 HTTP/1.1
 ```
-===========================================
-## P.S. You can get access to your HTTP servers from another host. Just use your server-ip instead of 127.0.0.1.
-## Inspired by 
+---
+### P.S. You can get access to your HTTP servers from another host. Just use your server-ip instead of 127.0.0.1.
+### Inspired by 
  * https://pypi.org/project/httpony/ 
  * https://github.com/mblayman/httpony
