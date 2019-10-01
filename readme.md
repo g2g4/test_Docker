@@ -1,4 +1,4 @@
-##usage 
+## usage 
 ```
 docker run -d -p 81:81 -v /tmp:/tmp g2g4/ponytest 
 ```
@@ -27,4 +27,6 @@ or
 curl http://127.0.0.1:82
 ```
 ## P.S. You can get access to your HTTP servers from another host. Just use your server-ip instead of 127.0.0.1.
-## Inspired by https://pypi.org/project/httpony/ (https://github.com/mblayman/httpony)
+## Inspired by 
+ ..* https://pypi.org/project/httpony/ 
+ ..* https://github.com/mblayman/httpony
