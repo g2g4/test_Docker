@@ -9,9 +9,9 @@
 docker run -d -p 81:81 -v /tmp:/tmp g2g4/ponytest 
 ```
 ### make test request to HTTP listener (browser/curl/lynx)
-
+```
 http://127.0.0.1:81/your_message
-
+```
 ### check incomming requests
 ```
 cat /tmp/index.html
@@ -21,9 +21,9 @@ cat /tmp/index.html
 docker run -dit --name ponytestHTTP -p 82:80 -v /tmp:/usr/local/apache2/htdocs/ httpd:2.4
 ```
 ### show requests (browser/curl/lynx)
-
+```
 http://127.0.0.1:82
-
+```
 ---
 ### example of my real output
 ```
