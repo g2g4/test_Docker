@@ -20,7 +20,7 @@ or
 ```
 lynx http://127.0.0.1:81/your_message2/test/test58
 ```
-# check incomming requests
+### check incomming requests
 ```
 cat /tmp/index.html
 ```
@@ -41,7 +41,7 @@ curl http://127.0.0.1:82
 ```
 cat /tmp/index.html
 ```
-```
+```!/bin/bash
 GET /test1/test2/test3 HTTP/1.1
 Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
 Accept-Encoding: gzip, deflate
@@ -62,10 +62,10 @@ Host: 127.0.0.1:81
 Accept: */*
 User-Agent: curl/7.58.0
 ```
-```
+```!/bin/bash
 cat /tmp/index.html | grep GET
 ```
-```
+```!/bin/bash
 GET /tiesto/est/testo.html34 HTTP/1.1
 GET /mama/myla/ramu HTTP/1.1
 GET /test1 HTTP/1.1
