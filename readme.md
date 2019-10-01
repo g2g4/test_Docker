@@ -26,9 +26,10 @@ or
 ```
 curl http://127.0.0.1:82
 ```
-## Exampe: just my real output
+## Example. My real output
 ```
 cat /tmp/index.html
+```
 ```
 GET /test1/test2/test3 HTTP/1.1
 Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
