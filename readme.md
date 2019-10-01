@@ -2,7 +2,7 @@
 * Ubuntu 18.04.3 LTS (Bionic Beaver)
 
 ### known bugs
-* container do not collect curl requests to /tmp/index.html untill web/lynx request is . 
+* container do not collect curl requests to /tmp/index.html until web/lynx request will be sent
 
 ### usage 
 ```
