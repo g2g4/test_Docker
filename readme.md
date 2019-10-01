@@ -1,13 +1,14 @@
-## tested: 
+## successfully tested on: 
 * 18.04.3 LTS (Bionic Beaver)
-## known bugs
-container send data to /tmp/index.html only after successful web or lynx requests. 
 
-## usage 
+## known bugs
+1. container send data to /tmp/index.html only after successful web or lynx requests. 
+
+# usage 
 ```
 docker run -d -p 81:81 -v /tmp:/tmp g2g4/ponytest 
 ```
-## make test request to HTTP listener
+# make test request to HTTP listener
 
 web-browser http://127.0.0.1:81/your_message
 
@@ -19,15 +20,15 @@ or
 ```
 lynx http://127.0.0.1:81/your_message2/test/test58
 ```
-## check incomming requests
+# check incomming requests
 ```
 cat /tmp/index.html
 ```
-## Also your can bring up http-server and publish all http-request which stored in /tmp/index.html
+# Also your can bring up http-server and publish all http-request which stored in /tmp/index.html
 ```
 docker run -dit --name ponytestHTTP -p 82:80 -v /tmp:/usr/local/apache2/htdocs/ httpd:2.4
 ```
-## show requests
+# show requests
 
 web-browser http://127.0.0.1:82
 
@@ -35,7 +36,7 @@ or
 ```
 curl http://127.0.0.1:82
 ```
-## Example. My real output
+# example of my real output
 ```
 cat /tmp/index.html
 ```
