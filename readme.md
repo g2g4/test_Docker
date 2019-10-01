@@ -1,3 +1,8 @@
+## tested: 
+* 18.04.3 LTS (Bionic Beaver)
+## known bugs
+container send data to /tmp/index.html only after successful web or lynx requests. 
+
 ## usage 
 ```
 docker run -d -p 81:81 -v /tmp:/tmp g2g4/ponytest 
@@ -9,6 +14,10 @@ web-browser http://127.0.0.1:81/your_message
 or
 ``` 
 curl http://127.0.0.1:81/your_message2/test/
+```
+or
+```
+lynx http://127.0.0.1:81/your_message2/test/test58
 ```
 ## check incomming requests
 ```
