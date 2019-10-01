@@ -23,15 +23,4 @@ web http://127.0.0.1:82
 ```
 curl http://127.0.0.1:82
 ```
-##note. You can use remote acees to the your HTTP-servers. Just use your server ip instead 127.0.0.1
-====================================
-##Dockerfile httpony HTTP Listener
-```
-FROM alpine:latest
-RUN apk add --update \
-    py-pip \
-   && pip install httpony
-VOLUME ["/tmp"]
-CMD httpony -l 0.0.0.0 -p 81 >> /tmp/index.html
-EXPOSE 81
-```
+##P.S. You can use remote acees to the your HTTP-servers. Just use your server ip instead 127.0.0.1
